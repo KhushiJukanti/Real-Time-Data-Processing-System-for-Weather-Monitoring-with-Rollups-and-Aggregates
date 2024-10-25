@@ -17,7 +17,8 @@ This project implements a real-time data processing system to monitor weather co
 
 ## Table of Contents
 - [Getting Started](#getting-started)
-- [Installation](#installation)
+- [Setup Instructions](#setup-instructions)
+- [Running the Application](#running-the-application)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Bonus Features](#bonus-features)
@@ -30,26 +31,51 @@ To run this application, ensure you have Docker installed on your machine. The s
 ### Prerequisites
 - A valid API key from OpenWeatherMap (sign up [here](https://openweathermap.org/)).
 
-## Installation
 
-1. Clone the repository:
+## Setup Instructions
+
+1. **Clone the repository :**
    ```bash
-   git clone https://github.com/yourusername/weather-monitoring-system.git
-   cd weather-monitoring-system
+   git clone https://github.com/yourusername/weather-app.git
+   cd rule-engine-ast
    ```
+2. **Install dependencies :**
+    - **For the frontend :**
+        ```bash
+        cd weather-monitering
+        npm install
+        ```
+      
+    - **For the backend :** 
+        ```bash
+        cd weather-backend
+        npm install
+        ```
 
-2. Run Backend:
+3. **Create a `.env` file in the `backend` directory and set up your environment variables:**
+    ```bash
+    MONGO_URI=your_mongo_db_connection_string
+    PORT=7000
+    ```
+
+4. **Ensure MongoDB is running and the environment variables are correctly set up in your `.env` file.**
+
+## Running the Application
+
+1. Run Backend:
    ```bash
    cd weather-moniter-backend
    node server.js
    ```
-3. Run Front-end:
+2. Run Front-end:
    ```bash
    cd weather-moniter-frontend
    npm start
    ```
 
-4. Ensure the necessary environment variables are set for the OpenWeatherMap API key.
+3. Ensure the necessary environment variables are set for the OpenWeatherMap API key.
+
+4. **Navigate to the app in your browser** at `http://localhost:3000`.
 
 ## Usage
 
